@@ -1,0 +1,14 @@
+.wrap {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap .canvas {
+    border: 1px solid;
+    width: 1200px;
+    height: 700px;
+    border-radius: 10px;
+}
