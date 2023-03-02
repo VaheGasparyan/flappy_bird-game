@@ -1,0 +1,10 @@
+export const bg = new Image();
+bg.src = './img/flappy-background.png';
+export const heroImage = new Image();
+heroImage.src = './img/hero.png';
+export const platform = new Image();
+platform.src = './img/platform.png';
+export const pipeUpImg = new Image();
+pipeUpImg.src = './img/pipeUp.png';
+export const pipeBottomImg = new Image();
+pipeBottomImg.src = './img/pipeBottom.png'
