@@ -1,5 +1,10 @@
-import {bg, platform} from "./script_2.js";
+import {bg, pipeBottomImg, pipeUpImg, platform} from "./script_2.js";
 import { hero, ctx, cvs, gap, pipeBottom, pipeUp } from "./script.js";
+import { PipeUp, PipeBottom } from "./script_1.js";
+
+function randomYPos() {
+    return Math.round(Math.random() * 21);
+}
 
 export function draw() {
     ctx.drawImage(bg, 0, 0, cvs.width, cvs.height);
@@ -18,6 +23,16 @@ export function draw() {
 
 export function loop() {
     requestAnimationFrame(loop);
+
+    const lastPipe = pipeUp[pipeUp.length - 1];
+
+    if(lastPipe.x === 220) {
+        const randomNum = randomYPos();
+
+        pipeUp.push(new PipeUp(cvs.width, -randomNum, 60, 20, .5, 1, pipeUpImg));
+        pipeBottom.push(new PipeBottom(cvs.width, -randomNum, 60, 20, .5, 1, pipeBottomImg));
+    }
+
     hero.render();
 
     pipeUp.forEach(pipe => {
