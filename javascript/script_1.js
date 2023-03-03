@@ -16,6 +16,10 @@ export class Hero {
     jumpUp(value) {
         this.y -= value;
     }
+
+    stop() {
+        this.yDelta = 0;
+    }
 }
 
 class Pipe {
@@ -31,6 +35,10 @@ class Pipe {
 
     goLeft() {
         this.x -= this.xDelta
+    }
+
+    stop() {
+        this.xDelta = 0;
     }
 }
 

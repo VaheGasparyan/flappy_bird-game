@@ -3,6 +3,7 @@ import { bg, heroImage, pipeUpImg, pipeBottomImg } from "./script_2.js";
 import { draw, loop } from "./script_3.js";
 
 export const cvs = document.querySelector('canvas');
+export const menu = document.querySelector('.menu');
 export const ctx = cvs.getContext('2d');
 export const gap = 90;
 
